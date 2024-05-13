@@ -3,12 +3,12 @@
   .inner{
     width: 90%;
   }
-  /* header */
-  /* header_inner */
-  .header_inner{
-    display: none;
-  }
 
+  .trigger{
+    display: block;
+  }
+  
+  /* header */
   .gnb{
     height: 100%;
     position: relative;
@@ -16,15 +16,19 @@
 
   .gnb ul{
     display: inline-block;
-    width: 16.667rem;
+    width: 266px;
     height: 100vh;
     position: fixed;
     top: 0;
-    right: 0;
-    /* right: -250px; */
-    background-color: rgba(3, 3, 3, 0.557);
+    right: -266px;
+    background-color: rgba(3, 3, 3, 0.685);
     text-align: center;
     padding-top: 5.333rem;
+    transition: .5s;
+  }
+
+  .gnb ul.click_menu{
+    right: 0;
   }
 
   .gnb ul li {padding:0.5rem 0;}
@@ -32,8 +36,13 @@
   .sns{
     display: block;
     position: absolute;
-    right: 1%;
-    /*transform:  translateX(150%);*/
+    top: 300px;
+    right: -266px;
+    transition: .5s;
+  }
+
+  .sns.click_menu{
+    right: 20px;
   }
 
   /*intro_inner*/
@@ -195,6 +204,20 @@
 
   .bar2{
     width: 50.333rem;
+  }
+
+  .d_dtn{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: auto;
+  }
+
+  .d_dtn>button{
+    width: 100%;
+    margin-right: 0;
   }
 
   /* footer */
